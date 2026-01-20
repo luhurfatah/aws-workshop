@@ -59,7 +59,7 @@ WorkingDirectory=$BACKEND_DIR
 ExecStart=/usr/bin/node $BACKEND_DIR/app.js
 Restart=always
 RestartSec=10
-Environment="PORT=5000"
+Environment="PORT=443"
 Environment="NODE_ENV=production"
 
 [Install]
@@ -143,8 +143,8 @@ echo -e "${GREEN}✓ Deployment Complete!${NC}"
 echo -e "${GREEN}================================${NC}"
 echo ""
 echo "📱 Frontend: http://$PUBLIC_IP"
-echo "🔗 Backend API: http://$PUBLIC_IP:5000/api"
-echo "💚 Health Check: http://$PUBLIC_IP:5000/api/health"
+echo "🔗 Backend API: http://$PUBLIC_IP:443/api"
+echo "💚 Health Check: http://$PUBLIC_IP:443/api/health"
 echo ""
 echo "📋 Useful Commands:"
 echo "   View backend logs: sudo journalctl -u workshop-backend.service -f"
